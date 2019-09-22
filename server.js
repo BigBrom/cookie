@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
     console.log('Cookies: ', req.cookies.cookieName)
     
     res.cookie('cookieName','hello world', { maxAge: 900000 })
-    res.send('hello world')
+    res.send({ hello: 'world' })
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
