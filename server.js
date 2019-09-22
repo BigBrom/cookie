@@ -11,10 +11,9 @@ app.get('/', function (req, res) {
     console.log('ip: ', ip);
     
     // Cookies that have not been signed
-    console.log('Cookies: ', req.cookies)
-    // Cookies that have been signed
-    console.log('Signed Cookies: ', req.signedCookies)
-    res.cookie('cookieName','hello world', { maxAge: 900000, httpOnly: true })
+    console.log('Cookies: ', req.cookies.cookieName)
+    
+    res.cookie('cookieName','hello world', { maxAge: 900000 })
     res.send('hello world')
 })
 
